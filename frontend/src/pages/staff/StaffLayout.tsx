@@ -10,6 +10,7 @@ export default function StaffLayout() {
     { to: 'bookings', label: 'Bookings' },
     { to: 'properties', label: 'Properties' },
     { to: 'sites', label: 'Cultural sites' },
+    { to: 'media', label: 'Photos' },
     { to: 'routes', label: 'User routes' },
     ...(role === 'admin'
       ? [
