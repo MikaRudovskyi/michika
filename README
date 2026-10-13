@@ -1,0 +1,13 @@
+How to start the project:
+1. Frontend
+    cd frontend
+    npm run dev
+2. Backend
+    - Run the Docker Desktop
+    cd backend/apps/api
+    .\.venv\Scripts\Activate.ps1
+    uvicorn app.main:app --reload
+
+    
+manager@michika.dev / Manager#2026!
+admin@michika.dev / Admin#2026!

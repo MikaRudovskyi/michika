@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-sumi text-washi antialiased;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans font-light min-h-screen;
+  }
+  h1, h2, h3 {
+    @apply font-serif;
+  }
+  ::selection {
+    background: rgba(212, 175, 55, 0.35);
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B0B0C;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #26262a;
+    border-radius: 999px;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/[0.04] backdrop-blur-xl border border-white/10 rounded-2xl;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm tracking-wide
+           transition-all duration-500 ease-calm disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply bg-gold text-sumi font-medium hover:bg-gold-soft hover:shadow-glow;
+  }
+  .btn-ghost {
+    @apply border border-white/15 text-washi hover:border-gold/60 hover:text-gold;
+  }
+  .input {
+    @apply w-full rounded-xl bg-white/[0.04] border border-white/10 px-4 py-3 text-sm text-washi
+           placeholder:text-mist/60 outline-none transition-colors duration-300 ease-calm
+           focus:border-gold/60;
+  }
+  .chip {
+    @apply rounded-full border border-white/10 px-4 py-1.5 text-xs tracking-wide text-mist
+           transition-all duration-500 ease-calm hover:border-gold/50 hover:text-washi cursor-pointer;
+  }
+  .chip-active {
+    @apply border-gold/70 bg-gold/10 text-gold;
+  }
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.3em] text-gold;
+  }
+  .hero-bg {
+    background-image:
+      radial-gradient(60% 50% at 72% 40%, rgba(212, 175, 55, 0.1), transparent 70%),
+      radial-gradient(50% 60% at 8% 95%, rgba(15, 31, 24, 0.95), transparent 70%);
+  }
+}
+
+input[type='range'] {
+  @apply accent-gold w-full;
+}
